@@ -1,0 +1,18 @@
+body {
+    background-color: rgba(0, 0, 255, 0.5);
+  }
+  
+
+h1 {
+    color: blue;
+}
+
+.image {
+    border-radius: 10px;
+  }
+  
+  .text {
+    background-color:aquamarine;
+    border: 2px solid black;
+    padding: 10px; /* add padding to make the frame more visible */
+  }
