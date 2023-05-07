@@ -40,3 +40,9 @@
     right: 0; /* set to right of the container */
   }
   
+  body {
+    background-color: rgb(240, 254, 255);
+  }
+  p{
+    font-size: 40px;
+  }
