@@ -7,13 +7,14 @@ function start() {
     intervalId = setInterval(moveMouse, 2);
   }
 }
-
+ 
 function stop() {
   if (isMoving) {
     isMoving = false;
     clearInterval(intervalId);
   }
 }
+
 
 function moveMouse() {
   var randomX = Math.floor(Math.random() * window.innerWidth);
