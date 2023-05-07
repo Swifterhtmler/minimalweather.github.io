@@ -1,31 +1,34 @@
 body {
-    background-color: aqua;
+    background: linear-gradient(to bottom, #85C1E9, #FFFFFF);
   }
   
-
-h1 {
-    color: blue;
-}
-
-.image {
+  h1 {
+    color: #17202A;
+  }
+  
+  .image {
     border-radius: 10px;
   }
   
   .text {
-    background-color: blue;
+    background-color: #F8F9F9;
     border: 2px solid black;
-    padding: 10px; /* add padding to make the frame more visible */
+    padding: 10px;
     width: 80%;
-    max-width: 600px; /* limit the maximum width to prevent it from getting too wide on larger screens */
+    max-width: 600px;
   }
   
-
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgba(0, 0, 255, 0.5);
+    background-color: transparent;
+  }
+  
+  .image {
+    border-radius: 10px;
+    filter: grayscale(100%);
   }
   
