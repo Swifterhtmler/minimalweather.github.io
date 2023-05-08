@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatting Website</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 20px;
+			color: #333;
+		}
+		.container {
+			width: 80%;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			margin-top: 20px;
+		}
+		input[type="text"] {
+			padding: 10px;
+			margin-bottom: 10px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+		}
+		button {
+			padding: 10px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+			cursor: pointer;
+		}
+		.chat-container {
+			margin-top: 20px;
+			max-height: 200px;
+			 overflow-y: auto;
+			border: 1px solid #ccc;
+			padding: 10px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+		}
+		.message {
+			margin: 0;
+			padding: 5px;
+			background-color: #f2f2f2;
+			border-radius: 5px;
+			box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+			max-width: 70%;
+			word-wrap: break-word;
+			position: relative;
+		}
+		.message.received {
+			background-color: #007aff;
+			color: #fff;
+		}
+		.message.received::before {
+			content: '';
+			display: block;
+			width: 0px;
+			height: 0px;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			border-right: 10px solid #007aff;
+			position: absolute;
+			left: -10px;
+			top: 8px;
+		}
+		.message.sent {
+			background-color: #f2f2f2;
+			color: #333;
+			align-self: flex-end;
+		}
+		.message.sent::before {
+			content: '';
+			display: block;
+			width: 0px;
+			height: 0px;
+			border-top: 10px solid transparent;
+			border-bottom: 10px solid transparent;
+			border-left: 10px solid #f2f2f2;
+			position: absolute;
+			right: -10px;
+			top: 8px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Chatting Website</h1>
+	<div class="container">
+		<form>
+			<input type="text" id="message-input" placeholder="Type your message here...">
+			<button id="send-button">Send</button>
+		</form>
+		<div class="chat-container" id="chat-container">
+			<!-- Chat messages will be displayed here -->
+		</div>
+	</div>
+
+	<script>
+		const form = document.querySelector('form');
+		const input = document.querySelector('#message-input');
+		const chatContainer = document.querySelector('#chat-container');
+
+		form.addEventListener('submit', function(e) {
+			e.preventDefault();
+
+			// Get the message from the input field
+			const message = input.value.trim();
+
+			// Clear the input field
+			input.value = '';
+
+			// Create a new paragraph element to display the message
+			const newMessage = document.createElement('p');
+			newMessage.textContent = message;
+
+			// Add the new message to the chat container
+			chatContainer.appendChild(newMessage);
+
+			// Scroll to the bottom of the chat container
+			chatContainer.scrollTop = chatContainer.scrollHeight;
+		});
+	</script>
+</body>
+</html>
