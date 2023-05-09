@@ -1,9 +1,7 @@
 body {
-
-background: linear-gradient blue , white;
-background-repeat: no-repeat;
-background-attachment: fixed;
-
+  background: linear-gradient(to bottom, rgb(70 140 250 ), white);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
