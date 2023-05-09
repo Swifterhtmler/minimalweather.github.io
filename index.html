@@ -13,21 +13,105 @@
     <div class="container">
       
 
-        <div class="text">Minimal Weather</div>
-    <div style="display: flex;">
+      
+    
       <!--- <img src="05686639-BD1B-4206-92B4-D55E37CD1177.jpeg" alt="image of apps ui" width="500" height="500" style="border-radius: 10px; margin-right: 20px;">
         <img src="appstore.png" alt="image of apps logo" width="500" height="500" style="border-radius: 10px;"> -->
-        <img src="EAB88F5B-E325-439B-88AE-6031004D1D8A.jpeg" alt="image of apps ui 1" width=2000" style="border-radius: 10px;">
+    
       
 
-    </div>
+    
     <!---- <img src="E098B077-7D6C-40FB-B6A3-3F2F04965C66.jpeg" alt="image of apps ui 2" width=2000" style="border-radius: 10px;"> -->
 
 
-    </div>
-<p>Calls for the creation of a government weather bureau began as early as 1844, when the electrical telegraph was introduced. In 1869, Cleveland Abbe began developing probabilistic forecasts using daily weather data sent via telegraph by the Cincinnati Chamber of Commerce and Western Union, which he convinced to back the collection of such information. Meanwhile, Increase A. Lapham of Wisconsin lobbied Congress to create such a service, having witnessed the destructive power of storms in the Great Lakes region.[9] Representative Halbert E. Paine introduced a bill to provide the funding, and in 1870, the Weather Bureau of the United States was established through a joint resolution of Congress signed by President Ulysses S. Grant[10] with a mission to "provide for taking meteorological observations at the military stations in the interior of the continent and at other points in the States and Territories... and for giving notice on the northern (Great) Lakes and on the seacoast by magnetic telegraph and marine signals, of the approach and force of storms." The agency was placed under the Secretary of War as Congress felt "military discipline would probably secure the greatest promptness, regularity, and accuracy in the required observations." Within the Department of War, it was assigned to the U.S. Army Signal Service under Brigadier General Albert J. Myer. General Myer gave the National Weather Service its first name: The Division of Telegrams and Reports for the Benefit of Commerce.[11]</p>
+    <h1>Minimal Weather</h1>
 
-    
+    </div>
+
+<style>
+  /* Style for the animated element */
+  .animated-element {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+  }
+  
+  /* Style for the animated element when it's in view */
+  .animated-element.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Style the image */
+  .animated-element img {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 1200px;
+
+  }
+.animated-element h2 {
+  margin-bottom: 1000px;
+  margin-left: 30%;
+  color: whitesmoke;
+  font-size: 68px;
+   text-shadow: 5px 5px 5px grey;
+}
+
+.animated-element h3 {
+ 
+  margin-left: 40%;
+  color: whitesmoke;
+  font-size: 68px;
+   text-shadow: 5px 5px 5px grey;
+}
+
+  .animated-element:first-child {
+  margin-bottom: 100px;
+ } 
+
+
+</style>
+</head>
+
+<div class="container">
+
+  <div class="animated-element"><img src="E098B077-7D6C-40FB-B6A3-3F2F04965C66.jpeg" alt="image of apps ui 2"></div>
+
+  <br><br><br><br>
+
+
+  <div class="animated-element"> <h2>Most minimal and elegant weather ecperiance </h2> 
+  
+  </div>
+
+  <div class="animated-element"><img src="EAB88F5B-E325-439B-88AE-6031004D1D8A.jpeg" alt=""></div>
+
+<div>
+
+  <div class="animated-element"> <h2>And always accurate weather information </h2> 
+    <div class="animated-element"> <h3>packed into single package </h3> 
+
+    </div>
+
+</div>
+
+<script>
+  const elements = document.querySelectorAll(".animated-element");
+  const windowHeight = window.innerHeight;
+
+  function checkScroll() {
+    for (let i = 0; i < elements.length; i++) {
+      let element = elements[i];
+      let positionFromTop = elements[i].getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight <= 0) {
+        element.classList.add("animated");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", checkScroll);
+</script>
 
 </body>
 </html>

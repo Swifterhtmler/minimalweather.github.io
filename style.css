@@ -1,48 +1,31 @@
+body {
+
+background: linear-gradient(to top,rgb(70, 140, 250) , white);
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+}
+
+h1 {
+
+  color: whitesmoke;
+ margin-left: 35%;
+ font-size: 68px;
+text-shadow: 5px 5px 5px grey;
+
+}
+
 .container {
-    position: relative;
-  }
-  
-  .container img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* change from center to flex-start */
-    align-items: center;
-    height: 100vh;
-    background-image: url("bg.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    margin-top: 0;
-  }
-  
-  .text {
-    font-size: 68px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    background-color: rgb( 92, 142, 255);
-    padding: 1rem;
-    position: absolute; /* add absolute position */
-    top: 0; /* set to top of the container */
-    left: 0; /* set to left of the container */
-    right: 0; /* set to right of the container */
-  }
-  
-  body {
-    background-color: rgb(240, 254, 255);
-  }
-  p{
-    font-size: 40px;
-  }
+  height: 200vh;
+}
+
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+img {
+  box-shadow: 5px 5px 5px grey;
+}
+
+
