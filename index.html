@@ -7,26 +7,16 @@
     <title>Minimal Weather</title>
     <link rel="stylesheet" href="style.css">
 
-<body>
 
-   
+<body>
+      
     <div class="container">
       
 
-      
-    
-      <!--- <img src="05686639-BD1B-4206-92B4-D55E37CD1177.jpeg" alt="image of apps ui" width="500" height="500" style="border-radius: 10px; margin-right: 20px;">
-        <img src="appstore.png" alt="image of apps logo" width="500" height="500" style="border-radius: 10px;"> -->
-    
-      
-
-    
-    <!---- <img src="E098B077-7D6C-40FB-B6A3-3F2F04965C66.jpeg" alt="image of apps ui 2" width=2000" style="border-radius: 10px;"> -->
-
-
-    <h1>Minimal Weather</h1>
+    <h1>Minimal Weather</h1>    
 
     </div>
+
 
 <style>
 
@@ -38,6 +28,7 @@
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 2s ease-out, transform 2s ease-out;
+   
   }
   
   /* Style for the animated element when it's in view */
@@ -50,11 +41,11 @@
   .animated-element img {
     border-radius: 10px;
     width: 100%;
-    margin-bottom: 1200px;
+    margin-bottom: 1000px;
 
   }
 .animated-element h2 {
-  margin-bottom: 1000px;
+  margin-bottom: 700px;
   margin-left: 30%;
   color: whitesmoke;
   font-size: 68px;
@@ -63,11 +54,24 @@
 
 .animated-element h3 {
  
-  margin-left: 40%;
+  margin-left: 30%;
   color: whitesmoke;
   font-size: 68px;
    text-shadow: 5px 5px 5px grey;
+
 }
+
+
+.animated-element a {
+  margin-left: 36%;
+  color: whitesmoke;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 48px;
+
+
+}
+
 
   .animated-element:first-child {
   margin-bottom: 100px;
@@ -75,6 +79,8 @@
 
 
 </style>
+
+
 </head>
 
 <div class="container">
@@ -84,7 +90,7 @@
   <br><br><br><br>
 
 
-  <div class="animated-element"> <h2>Most minimal and elegant weather ecperiance </h2> 
+  <div class="animated-element"> <h2>Most minimal and elegant weather experiance</h2> 
   
   </div>
 
@@ -94,10 +100,22 @@
 
   <div class="animated-element"> <h2>And always accurate weather information </h2> 
     <div class="animated-element"> <h3>packed into single package </h3> 
+   
 
-    </div>
+      <br><br><br><br><br><br>
+
+    <!--  <div class="animated-element"> <video autoplay src="Elokuvani.mp4"></video> -->
+
+      <div class="animated-element"> <a href="https://apps.apple.com/us/app/minimalweather/id6448237039">
+         Donwload Minimal weather
+      </a> 
+      <br><br><br><br><br><br> <br><br><br><br><br><br>
+
+    
+
 
 </div>
+  
 
 <script>
   const elements = document.querySelectorAll(".animated-element");
@@ -116,6 +134,19 @@
 
   window.addEventListener("scroll", checkScroll);
 </script>
+
+<script>
+
+  var myvid = $('#Elokuvani.mp4')[0];
+  $(window).scroll(function(){
+    var scroll = $(this).scrollTop();
+    scroll > 70 ? myvid.pause() : myvid.play()
+  })
+
+</script>
+
+
+  </div>
 
 </body>
 </html>
